@@ -10,6 +10,6 @@ Course.create(name: "Ruby", description: "This course covers the basic Ruby lang
 Course.create(name: "Sinatra", description: "This course covers sinatra, rack, and shotgun")
 Course.create(name: "Rails", description: "This course covers Rails and ActiveRecord")
 
-Card.create(title: "Method", definition: "A set of expressions that returns a value.")
-Card.create(title: "Object", definition: "Object is the default root of all Ruby objects. Object inherits from BasicObject which allows creating alternate object hierarchies.")
-Card.create(title: "Variable", definition: "variables are locations which hold data to be used in the programs.")
+Card.create(phrase: "Interpreted", definition: "No compiler necessary", course_id: 1)
+Card.create(phrase: "How do you start this web application?", definition: "rackup app.rb", course_id: 2)
+Card.create(phrase: "Model", definition: "The model represents a table in the database", course_id: 3)
