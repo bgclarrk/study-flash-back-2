@@ -1,8 +1,16 @@
 class CardsController < ApplicationController
 
     def index
-        cards = Card.all
-        render json: cards
+        if params[:course_id]
+            course_cards = []
+            Card.all.each do |card|
+                course_cards << card if card.course_id == params[:course_id].to_i
+            end
+            render json: course_cards
+        else
+            cards = Card.all
+            render json: cards
+        end
     end
 
     def create
