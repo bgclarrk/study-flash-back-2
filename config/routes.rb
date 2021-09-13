@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :cards
+  # resources :cards
   resources :courses do
     resources :cards, only: [:index, :new, :create, :show]
   end
